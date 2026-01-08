@@ -41,9 +41,9 @@ const handleCheckRate = async () => {
 
       // 3. レスポンス内容の判定
 // page.tsx の handleCheckRate 内
-if (data && data.error) {
+if (data && 'error' in data) {
   // 修正：オブジェクトの中身を文字列にして表示する
-  setStatus(`⚠️ Jupiter制限: ${JSON.stringify(data.error)}`);
+  setStatus(`⚠️ Jupiter制限`);
 } else if (data && data.outAmount) {
         setQuote(data);
         setStatus('✅ 取得成功');

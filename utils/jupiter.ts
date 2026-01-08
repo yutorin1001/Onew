@@ -17,6 +17,7 @@ export interface QuoteResponse {
   routePlan: any[];
   contextSlot?: number;
   timeTaken?: number;
+  error?: any;
 }
 
 /**
